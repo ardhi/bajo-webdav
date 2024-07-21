@@ -1,0 +1,10 @@
+{
+  "Connection must have an 'url'": "",
+  "Invalid method '%s'": "",
+  "Unknown method '%s'": "",
+  "Path '%s' already exists": "",
+  "Path '%s' doesn't exist yet": "",
+  "No such connection '%s'": "",
+  "Source path '%s' doesn't exist yet": "",
+  "Destination path '%s' exists already": ""
+}
