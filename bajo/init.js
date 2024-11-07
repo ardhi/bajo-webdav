@@ -1,5 +1,4 @@
 async function handler ({ item, options }) {
-  const { error } = this.app.bajo
   const { isString, has } = this.app.bajo.lib._
   if (isString(item)) item = { name: item }
   if (!has(item, 'url')) throw this.error('Connection must have a \'url\'')
@@ -9,7 +8,7 @@ async function handler ({ item, options }) {
 
 async function init () {
   const { buildCollections } = this.app.bajo
-  this.connections = await buildCollections({ ns: this.ns, handler, useDefaultName: true, dupChecks: ['name'] })
+  this.connections = await buildCollections({ ns: this.ns, handler, useDefaultName: true, dupChecks: ['name'], container: 'connections' })
 }
 
 export default init
